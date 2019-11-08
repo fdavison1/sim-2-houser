@@ -19,3 +19,12 @@ VALUES
 ('house1', '123 dummy st'),
 ('house2', '234 dummy st'),
 ('house3', '345 dummy st');
+
+--ALTER TABLE 
+
+ALTER TABLE houses
+ADD COLUMN img TEXT,
+ADD COLUMN mortgage INT,
+ADD COLUMN rent INT;
+
+SELECT * FROM houses;

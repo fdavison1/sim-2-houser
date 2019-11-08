@@ -50,7 +50,7 @@ export default class Dash extends React.Component {
 
                 {/* ADD NEW PROPERTY BUTTON */}
 
-                <Link to='/wizard'>
+                <Link to='/wizard/step1'>
                     <button>Add New Property</button>
                 </Link>
 
