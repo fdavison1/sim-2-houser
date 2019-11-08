@@ -22,14 +22,15 @@ class Three extends React.Component {
                 })
                 
             })
+            
     }
 
-    //HANDLE CHANGE - INPUT FIELDS
-    handleMortgage(e) {
-        this.setState({
-            name: e.target.value
-        })
-    }
+    // //HANDLE CHANGE - INPUT FIELDS
+    // handleMortgage(e) {
+    //     this.setState({
+    //         name: e.target.value
+    //     })
+    // }
    
 
     render() {

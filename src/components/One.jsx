@@ -4,70 +4,27 @@ import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 // import {requestHouses} from '../ducks/reducer'
 // import {setHouse} from '../ducks/reducer'
-import {setName} from '../ducks/reducer'
+import {setName, setAddress, setCity, setState, setZip} from '../ducks/reducer'
 
 class One extends React.Component {
     constructor() {
         super()
 
         this.state = {
-            // name: '',
-            // address: '',
-            // city: '',
-            // state: '',
-            // zip: ''
+           
         }
     }
 
-    // postHouse() {
-    //     axios.post('/api/houses', this.state)
-    //         .then(res => {
-    //             this.setState({
-    //                 houses: res.data
-    //             })
-                
-    //         })
+  
+    // nextButton(){
+    //     this.
     // }
-
-    //HANDLE CHANGE - INPUT FIELDS
-    handleName(e) {
-        this.setState({
-            name: e.target.value
-        })
-    }
-    handleAddress(e) {
-        this.setState({
-            address: e.target.value
-        })
-    }
-    handleCity(e) {
-        this.setState({
-            city: e.target.value
-        })
-    }
-    handleState(e) {
-        this.setState({
-            state: e.target.value
-        })
-    }
-    handleZip(e) {
-        this.setState({
-            zip: e.target.value
-        })
-    }
+    
 
     render() {
         // console.log(this.props)
         return (
             <div>
-
-
-
-
-                {/* <h2>Add New Listing</h2> */}
-
-
-
 
                 {/* INPUT BOXES */}
                 <h3>Property Name</h3>
@@ -77,22 +34,22 @@ class One extends React.Component {
 
                 <h3>Address</h3>
                 <input
-                    onChange={(e) => this.handleAddress(e)}
+                     onChange={(e) => this.props.setAddress(e.target.value)}
                     type="text" />
 
                 <h3>City</h3>
                 <input
-                    onChange={(e) => this.handleCity(e)}
+                     onChange={(e) => this.props.setCity(e.target.value)}
                     type="text" />
 
                 <h3>State</h3>
                 <input
-                    onChange={(e) => this.handleState(e)}
+                     onChange={(e) => this.props.setState(e.target.value)}
                     type="text" />
 
                 <h3>Zip</h3>
                 <input
-                    onChange={(e) => this.handleZip(e)}
+                     onChange={(e) => this.props.setZip(e.target.value)}
                     type='text' />
 
                 <hr />
@@ -116,4 +73,4 @@ function mapStateToProps(state){
     return state
 }
 
-export default connect(mapStateToProps,{setName})(One)
+export default connect(mapStateToProps,{setName, setAddress, setCity, setState, setZip})(One)
