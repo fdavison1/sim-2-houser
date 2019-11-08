@@ -10,7 +10,15 @@ export default class Header extends React.Component{
     }
     render(){
         return(
-            <header>Header.jsx</header>
+            <header>
+                {/* Header.jsx */}
+
+            <div className="header">
+            <h2>Houser</h2>
+
+            </div>
+
+            </header>
         )
     }
 }

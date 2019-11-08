@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -25,14 +29,76 @@
   border: solid black;
   max-width: 800px;
   margin: 0 auto;
+  padding: 25px;
+  background: white;
 }
 
 button {
   font-size: 2rem;
+  margin: 5px;
+  background: #8AEA92;
+  border: solid black;
+  border-radius: 6px;
+}
+
+button:hover {
+  background: yellow;
 }
 
 img {
   border: solid red;
   height: 50px;
   width: 50px;
+}
+
+/* STYLING */
+header {
+  height: 100px;
+  background:#519872;
+  color: white;
+  /* font-weight: 500; */
+  display: flex;
+  /* padding-left: 50px; */
+  /* max-width: 1000px; */
+  margin: 0 auto;
+}
+
+.header {
+  min-width: 800px;
+  /* border: solid black; */
+  margin: 0 auto;
+  display: flex;
+  /* padding-left: 50px; */
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 3rem;
+}
+
+.dash {
+  background: #AFD4C0;
+  /* padding: 25px; */
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: sans-serif;
+  font-weight: 200;
+  color: #3B5249;
+}
+
+.dash2 {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  /* text-decoration: underline; */
+}
+
+hr {
+  max-width: 800px;
+  margin-bottom: 50px;
+  border: 1px solid black;
 }

@@ -42,18 +42,22 @@ export default class Dash extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='dash'>
 
-
+                <div className="dash2">
 
                 <h1>Dashboard</h1>
-
-
                 {/* ADD NEW PROPERTY BUTTON */}
 
                 <Link to='/wizard/step1'>
                     <button>Add New Property</button>
                 </Link>
+                
+                </div>
+
+                <hr/>
+
+                <h2>Home Listings:</h2>
 
                 {/* MAPPING */}
                 {this.state.houses.map(el => (
