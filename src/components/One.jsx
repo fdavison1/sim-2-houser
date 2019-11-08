@@ -24,7 +24,7 @@ class One extends React.Component {
     render() {
         // console.log(this.props)
         return (
-            <div>
+            <div className='dash'>
 
                 {/* INPUT BOXES */}
                 <h3>Property Name</h3>

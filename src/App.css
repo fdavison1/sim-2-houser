@@ -28,14 +28,15 @@
 .house {
   border: solid black;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 25px;
   background: white;
+  border-radius: 6px;
 }
 
 button {
   font-size: 2rem;
-  margin: 5px;
+  margin: 35px;
   background: #8AEA92;
   border: solid black;
   border-radius: 6px;
@@ -95,10 +96,23 @@ h1 {
   align-items: center;
   max-width: 800px;
   /* text-decoration: underline; */
+  /* border: solid red; */
 }
 
 hr {
   max-width: 800px;
-  margin-bottom: 50px;
+  margin: 15px auto;
   border: 1px solid black;
+}
+
+input {
+  height: 2rem;
+  border: solid #3B5249;
+  border-radius: 5px;
+  width: 200px;
+  margin: 16px;
+}
+
+h2, h3 {
+  margin: 0;
 }
