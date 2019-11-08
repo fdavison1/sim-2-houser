@@ -10,12 +10,12 @@ export default class Dash extends React.Component {
         this.state = {
             houses : []
         }
+        this.deleteHouse = this.deleteHouse.bind(this)
     }
 
 
 
     //AXIOS - GET ALL HOUSES
-    
     componentDidMount(){
         this.getAll()
     }
@@ -29,8 +29,13 @@ export default class Dash extends React.Component {
     }
 
 
-
-
+    //AXIOS - DELETE HOUSE
+    deleteHouse(id){
+        axios.delete(`api/houses/${id}`)
+        .then(res => {
+            this.getAll()
+        })
+    }
 
 
 
@@ -54,6 +59,7 @@ export default class Dash extends React.Component {
 
                     <House 
                     houses = {el}
+                    deleteHouse ={this.deleteHouse}
                     />
 
                 ))}

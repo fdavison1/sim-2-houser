@@ -13,5 +13,12 @@ module.exports = {
         .then(result => {
             res.status(200).send(result)
         })
+    },
+    deleteHouse (req, res){
+        const db = req.app.get('db')
+        db.delete_house(req.params.id)
+        .then(result => {
+            res.status(200).send(result)
+        })
     }
 }
