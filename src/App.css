@@ -28,7 +28,7 @@
 .house {
   border: solid black;
   max-width: 800px;
-  margin: 20px auto;
+  margin: 25px auto 0 auto;
   padding: 25px;
   background: white;
   border-radius: 6px;
@@ -97,6 +97,7 @@ h1 {
   max-width: 800px;
   /* text-decoration: underline; */
   /* border: solid red; */
+  /* height: 100vh; */
 }
 
 hr {
@@ -115,4 +116,26 @@ input {
 
 h2, h3 {
   margin: 0;
+}
+
+h2 {
+  padding-top: 50px;
+}
+
+.header img {
+  border: none;
+  margin-right: 15px;
+  border-radius: 6px;
+}
+
+footer {
+  background: #AFD4C0;
+  height: 300px;
+}
+
+.listing {
+ font-size: 1.2rem;
+ display: flex;
+ max-width: 800px;
+ margin: 0 auto;
 }

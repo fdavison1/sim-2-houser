@@ -23,7 +23,7 @@ export default class Wiz extends React.Component {
 
 
                 <h2>Add New Listing</h2>
-
+                <hr/>
 
                 {/* ROUTES */}
                 <Route path='/wizard/step1' component={One}></Route>

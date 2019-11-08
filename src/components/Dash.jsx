@@ -56,8 +56,11 @@ export default class Dash extends React.Component {
                 </div>
 
                 <hr/>
+                
+                <div className='listing'>
 
-                <h2>Home Listings:</h2>
+                <h3>Home Listings:</h3>
+                </div>
 
                 
 
@@ -72,7 +75,7 @@ export default class Dash extends React.Component {
 
                 ))}
 
-
+                    
 
             </div>
         )
