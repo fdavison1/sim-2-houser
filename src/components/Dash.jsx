@@ -22,6 +22,7 @@ export default class Dash extends React.Component {
     
     getAll(){
         axios.get('/api/houses').then(res => {
+            console.log(res.data)
             this.setState({
                 houses: res.data
             })

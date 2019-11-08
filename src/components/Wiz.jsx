@@ -15,10 +15,6 @@ export default class Wiz extends React.Component {
         }
     }
 
-
-
- 
-
     render() {
         return (
             <div>
@@ -34,8 +30,6 @@ export default class Wiz extends React.Component {
                 <Route path='/wizard/step2' component={Two}></Route>
                 <Route path='/wizard/step3' component={Three}></Route>
                
-
-
 
 
                 {/* CANCEL BUTTON */}

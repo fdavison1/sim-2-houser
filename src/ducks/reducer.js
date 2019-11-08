@@ -7,7 +7,10 @@ const initialState = {
     address: '',
     city: '',
     state: '',
-    zip: ''
+    zip: '',
+    img: '',
+    mortgage: '',
+    rent: ''
 
 }
 
@@ -18,6 +21,9 @@ const SET_ADDRESS = 'SET_ADDRESS'
 const SET_CITY = 'SET_CITY'
 const SET_STATE = 'SET_STATE'
 const SET_ZIP = 'SET_ZIP'
+const SET_URL = 'SET_URL'
+const SET_MORTGAGE = 'SET_MORTGAGE'
+const SET_RENT = 'SET_RENT'
 
 //ACTION BUILDERS
 //get houses 
@@ -69,25 +75,52 @@ export const setZip = zip => {
         payload: zip
     }
 }
-
-
+//set URL
+export const setURL = img => {
+    return {
+        type: SET_URL,
+        payload: img
+    }
+}
+//set mortgage
+export const setMortgage = mortgage => {
+    return {
+        type: SET_MORTGAGE,
+        payload: mortgage
+    }
+}
+//set rent
+export const setRent = rent => {
+    return {
+        type: SET_RENT,
+        payload: rent
+    }
+}
 
 export default function reducer(state = initialState, action) {
     switch (action.type) {
         case GET_HOUSES:
             return { houses: action.payload }
         case SET_NAME:
-            console.log(action.payload)
+            // console.log(action.payload)
             return { ...state, name: action.payload }
         case SET_ADDRESS:
             return { ...state, address: action.payload }
         case SET_CITY:
             return { ...state, city: action.payload }
         case SET_STATE:
-                console.log(action.payload)
+                // console.log(action.payload)
             return { ...state, state: action.payload }
         case SET_ZIP:
             return { ...state, zip: action.payload }
+        case SET_URL:
+            console.log(action.payload)
+            return {...state, img: action.payload}
+        case SET_MORTGAGE: 
+        console.log(action.payload)
+            return {...state, mortgage: action.payload}
+        case SET_RENT:
+            return {...state, rent: action.payload}
         default:
             return state
     }

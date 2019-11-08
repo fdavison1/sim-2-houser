@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import {getHouses} from '../ducks/reducer'
+import {getHouses, setRent, setMortgage} from '../ducks/reducer'
 import {connect} from 'react-redux'
 
 class Three extends React.Component {
@@ -25,14 +25,6 @@ class Three extends React.Component {
             
     }
 
-    // //HANDLE CHANGE - INPUT FIELDS
-    // handleMortgage(e) {
-    //     this.setState({
-    //         name: e.target.value
-    //     })
-    // }
-   
-
     render() {
         return (
             <div>
@@ -40,16 +32,17 @@ class Three extends React.Component {
 
 
 
-                {/* <h2>Add New Listing</h2> */}
-
-
                 {/* INPUT BOXES */}
-                <h3>Property Name</h3>
+                <h3>Monthly Mortgage Amount</h3>
                 <input
-                    onChange={(e) => this.handleMortgage(e)}
+                // onChange={(e) => console.log(e.target.value)}
+                    onChange={(e) => this.props.setMortgage(e.target.value)}
                     type="text" />
 
-                
+                <h3>Desired Monthly Rent</h3>
+                <input
+                    onChange={(e) => this.props.setRent(e.target.value)}
+                    type="text" />
 
                 <hr />
 
@@ -81,4 +74,4 @@ function mapStateToProps(state){
     return state
 }
 
-export default connect(mapStateToProps,{getHouses})(Three)
+export default connect(mapStateToProps,{getHouses, setMortgage, setRent})(Three)

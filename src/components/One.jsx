@@ -58,7 +58,7 @@ class One extends React.Component {
 
                 <Link to='/wizard/step2'>
                 <button
-                // onClick={()=> this.props.setName()}
+                
                 >Next</button>
                 </Link>
 

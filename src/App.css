@@ -30,3 +30,9 @@
 button {
   font-size: 2rem;
 }
+
+img {
+  border: solid red;
+  height: 50px;
+  width: 50px;
+}

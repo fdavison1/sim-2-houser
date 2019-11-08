@@ -1,41 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 // import axios from 'axios'
+import {connect} from 'react-redux'
+import {setURL} from '../ducks/reducer'
 
-export default class Two extends React.Component {
+class Two extends React.Component {
     constructor() {
         super()
 
         this.state = {
-            imgURL: ''
+            // imgURL: ''
         }
     }
 
   
-
-    //HANDLE CHANGE - INPUT FIELDS
-    handleURL(e) {
-        this.setState({
-            name: e.target.value
-        })
-    }
     
 
     render() {
         return (
             <div>
 
-
-
-
-                {/* <h2>Add New Listing</h2> */}
-
-
-
                 {/* INPUT BOXES */}
                 <h3>Image URL</h3>
                 <input
-                    onChange={(e) => this.handleURL(e)}
+                    onChange={(e) => this.props.setURL(e.target.value)}
                     type="text" />
 
               
@@ -49,7 +37,9 @@ export default class Two extends React.Component {
                    {/* NEXT BUTTON */}
 
                    <Link to='/wizard/step3'>
-                <button>Next</button>
+                <button
+                
+                >Next</button>
                 </Link>
                
                <hr/>
@@ -58,3 +48,9 @@ export default class Two extends React.Component {
         )
     }
 }
+
+function mapStateToProps(state){
+    return state
+}
+
+export default connect(mapStateToProps,{setURL})(Two)
