@@ -20,9 +20,18 @@ class Three extends React.Component {
                 this.setState({
                     houses: res.data
                 })
-                
+                this.getAll()
             })
             
+    }
+
+    getAll(){
+        axios.get('/api/houses').then(res => {
+            console.log(res.data)
+            this.setState({
+                houses: res.data
+            })
+        })
     }
 
     render() {
