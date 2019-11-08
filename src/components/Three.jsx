@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import {getHouses} from '../ducks/reducer'
+import {connect} from 'react-redux'
 
-export default class Three extends React.Component {
+class Three extends React.Component {
     constructor() {
         super()
 
@@ -13,7 +15,7 @@ export default class Three extends React.Component {
     }
 
     postHouse() {
-        axios.post('/api/houses', this.state)
+        axios.post('/api/houses', this.props)
             .then(res => {
                 this.setState({
                     houses: res.data
@@ -71,3 +73,11 @@ export default class Three extends React.Component {
         )
     }
 }
+
+
+
+function mapStateToProps(state){
+    return state
+}
+
+export default connect(mapStateToProps,{getHouses})(Three)

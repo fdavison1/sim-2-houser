@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // import axios from 'axios'
 import {connect} from 'react-redux'
+// import {requestHouses} from '../ducks/reducer'
+// import {setHouse} from '../ducks/reducer'
+import {setName} from '../ducks/reducer'
 
 class One extends React.Component {
     constructor() {
@@ -69,7 +72,7 @@ class One extends React.Component {
                 {/* INPUT BOXES */}
                 <h3>Property Name</h3>
                 <input
-                    onChange={(e) => this.handleName(e)}
+                    onChange={(e) => this.props.setName(e.target.value)}
                     type="text" />
 
                 <h3>Address</h3>
@@ -97,7 +100,9 @@ class One extends React.Component {
                 {/* NEXT BUTTON */}
 
                 <Link to='/wizard/step2'>
-                <button>Next</button>
+                <button
+                // onClick={()=> this.props.setName()}
+                >Next</button>
                 </Link>
 
                 <hr/>
@@ -111,4 +116,4 @@ function mapStateToProps(state){
     return state
 }
 
-export default connect(mapStateToProps)(One)
+export default connect(mapStateToProps,{setName})(One)

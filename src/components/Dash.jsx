@@ -59,6 +59,7 @@ export default class Dash extends React.Component {
 
                     <House 
                     houses = {el}
+                    key={el.id}
                     deleteHouse ={this.deleteHouse}
                     />
 
