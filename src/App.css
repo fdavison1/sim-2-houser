@@ -62,6 +62,7 @@ header {
   /* padding-left: 50px; */
   /* max-width: 1000px; */
   margin: 0 auto;
+  align-items: center;
 }
 
 .header {
@@ -120,6 +121,10 @@ h2, h3 {
 
 h2 {
   padding-top: 50px;
+}
+
+.header h2 {
+  padding: 0;
 }
 
 .header img {
