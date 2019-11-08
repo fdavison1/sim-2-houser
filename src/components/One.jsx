@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
+import {connect} from 'react-redux'
 
-export default class One extends React.Component {
+class One extends React.Component {
     constructor() {
         super()
 
         this.state = {
-            name: '',
-            address: '',
-            city: '',
-            state: '',
-            zip: ''
+            // name: '',
+            // address: '',
+            // city: '',
+            // state: '',
+            // zip: ''
         }
     }
 
@@ -53,6 +54,7 @@ export default class One extends React.Component {
     }
 
     render() {
+        // console.log(this.props)
         return (
             <div>
 
@@ -104,3 +106,9 @@ export default class One extends React.Component {
         )
     }
 }
+
+function mapStateToProps(state){
+    return state
+}
+
+export default connect(mapStateToProps)(One)
