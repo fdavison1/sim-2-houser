@@ -20,3 +20,13 @@
 .App-link {
   color: #09d3ac;
 }
+
+.house {
+  border: solid black;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+button {
+  font-size: 2rem;
+}

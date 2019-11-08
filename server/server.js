@@ -9,6 +9,7 @@ const app = express()
 app.use(express.json())
 
 //endpoints
+app.get('/api/houses', ctrl.getAll)
 
 //listening
 massive(CONNECTION_STRING).then(databaseConnection => {

@@ -2,9 +2,10 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
-import Dash from './components/Dash'
-import House from './components/House'
-import Wiz from './components/Wiz'
+// import Dash from './components/Dash'
+// import House from './components/House'
+// import Wiz from './components/Wiz'
+import routes from './routes'
 
 
 
@@ -24,11 +25,10 @@ export default class App extends React.Component {
        <div className="App">
 
     App.js
-    <Header />
-    <Dash />
-    <House />
-    <Wiz />
+   
+      <Header />
 
+      {routes}
 
     </div>
   );
