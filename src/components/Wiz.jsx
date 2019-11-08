@@ -1,8 +1,9 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-export default class Wiz extends React.Component{
-    constructor(){
+export default class Wiz extends React.Component {
+    constructor() {
         super()
 
         this.state = {
@@ -14,88 +15,99 @@ export default class Wiz extends React.Component{
         }
     }
 
+    postHouse() {
+        axios.post('/api/houses', this.state)
+            .then(res => {
+                this.setState({
+                    houses: res.data
+                })
+                
+            })
+    }
 
     //HANDLE CHANGE - INPUT FIELDS
-    handleName(e){
+    handleName(e) {
         this.setState({
             name: e.target.value
         })
     }
-    handleAddress(e){
+    handleAddress(e) {
         this.setState({
             address: e.target.value
         })
     }
-    handleCity(e){
+    handleCity(e) {
         this.setState({
             city: e.target.value
         })
     }
-    handleState(e){
+    handleState(e) {
         this.setState({
             state: e.target.value
         })
     }
-    handleZip(e){
+    handleZip(e) {
         this.setState({
             zip: e.target.value
         })
     }
 
-
-
-
-
-
-
-
-
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                
-                
-                
-                
+
+
+
+
                 <h2>Add New Listing</h2>
-                
-            
-                 {/* CANCEL BUTTON */}
+
+
+                {/* CANCEL BUTTON */}
 
                 <Link to={'/'}>
-                 <button>Cancel</button>
+                    <button>Cancel</button>
                 </Link>
-                
-                
+
+
                 {/* INPUT BOXES */}
                 <h3>Property Name</h3>
-                <input 
-                onChange={(e)=> this.handleName(e)}
-                type="text"/>
+                <input
+                    onChange={(e) => this.handleName(e)}
+                    type="text" />
 
                 <h3>Address</h3>
-                <input 
-                  onChange={(e)=> this.handleAddress(e)}
-                  type="text"/>
+                <input
+                    onChange={(e) => this.handleAddress(e)}
+                    type="text" />
 
                 <h3>City</h3>
-                <input 
-                  onChange={(e)=> this.handleCity(e)}
-                  type="text"/>
+                <input
+                    onChange={(e) => this.handleCity(e)}
+                    type="text" />
 
                 <h3>State</h3>
-                <input 
-                  onChange={(e)=> this.handleState(e)}
-                  type="text"/>
+                <input
+                    onChange={(e) => this.handleState(e)}
+                    type="text" />
 
                 <h3>Zip</h3>
-                <input 
-                  onChange={(e)=> this.handleZip(e)}
-                  type='text'/>
-                
-                
-                
-                </div>
+                <input
+                    onChange={(e) => this.handleZip(e)}
+                    type='text' />
+
+                <hr />
+
+                {/* COMPLETE BUTTON */}
+
+                <Link to='/'>
+
+                    <button
+                        onClick={() => this.postHouse()}
+                    >Complete</button>
+
+                </Link>
+
+            </div>
         )
     }
 }
